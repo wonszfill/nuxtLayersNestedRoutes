@@ -1,0 +1,26 @@
+{
+  "name": "front",
+  "version": "0.0.1",
+  "private": true,
+  "main": "./nuxt.config.ts",
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare",
+    "test": "vitest run",
+    "coverage": "vitest run --coverage",
+    "typecheck": "nuxt typecheck"
+  },
+  "devDependencies": {
+    "nuxt": "^3.5.1",
+    "prettier": "^2.8.7",
+    "typescript": "5.0.4",
+    "jsdom": "^21.1.1",
+    "@vitejs/plugin-vue": "4.1.0"
+  },
+  "volta": {
+    "extends": "../../package.json"
+  }
+}

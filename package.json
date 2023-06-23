@@ -1,0 +1,58 @@
+{
+  "private": true,
+  "envLocal": "local",
+  "envStage": "stage",
+  "envProduction": "production",
+  "scripts": {
+    "dev": "pnpm --filter front dev --dotenv ../../env/.env.${npm_package_envLocal}",
+    "build": "pnpm --filter front build --dotenv ../../.env.${npm_package_envLocal}",
+    "stage": "pnpm --filter front dev --dotenv ../../env/.env.${npm_package_envStage}",
+    "build:stage": "pnpm --filter front build --dotenv ../../.env.${npm_package_envStage}",
+    "generate": "pnpm --filter front generate --dotenv ../../.env.${npm_package_envLocal}",
+    "preview": "pnpm --filter front preview",
+    "start": "pnpm build && pnpm preview",
+    "preinstall": "npx only-allow pnpm",
+    "postinstall": "pnpm --r postinstall",
+    "svg": "pnpm --filter ui svg",
+    "lint": "pnpm lint:js && pnpm lint:prettier",
+    "lint:fix": "prettier --write --list-different . && pnpm lint:js --fix",
+    "lint:js": "eslint --ext \".ts,.vue\" --ignore-path .gitignore .",
+    "lint:prettier": "prettier --check .",
+    "test:ui": "pnpm --filter ui test",
+    "test:front": "pnpm --filter front test",
+    "coverage:ui": "pnpm --filter ui test",
+    "coverage:front": "pnpm --filter front test",
+    "test": "pnpm test:front && pnpm test:ui",
+    "test:coverage": "pnpm coverage:front && pnpm coverage:ui",
+    "storybook": "pnpm --filter ui storybook",
+    "build-storybook": "pnpm --filter ui build-storybook",
+    "typecheck:front": "pnpm --filter front typecheck",
+    "typecheck": "pnpm typecheck:front"
+  },
+  "devDependencies": {
+    "base": "workspace:*",
+    "ui": "workspace:*",
+    "front": "workspace:*",
+    "orders": "workspace:*",
+    "users": "workspace:*",
+    "contractors": "workspace:*"
+  },
+  "engines": {
+    "node": ">=18.15.0",
+    "pnpm": ">=8.5.0"
+  },
+  "volta": {
+    "node": "18.15.0",
+    "pnpm": "8.5.0"
+  },
+  "peerDependencies": {},
+  "resolutions": {
+    "consola": "^3.0.0",
+    "base": "workspace:*",
+    "ui": "workspace:*",
+    "front": "workspace:*",
+    "orders": "workspace:*",
+    "users": "workspace:*",
+    "contractors": "workspace:*"
+  }
+}

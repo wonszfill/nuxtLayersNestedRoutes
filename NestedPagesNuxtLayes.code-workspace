@@ -1,0 +1,43 @@
+{
+  "folders": [
+    {
+      "path": "."
+    }
+  ],
+  "settings": {
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint",
+    "editor.codeActionsOnSave": {
+      "source.fixAll": false,
+    },
+  },
+  "launch": {
+    "configurations": [
+      {
+        "type": "node",
+        "request": "launch",
+        "name": "server: nuxt",
+        "args": [
+          "dev"
+        ],
+        "osx": {
+          "program": "${workspaceFolder}/node_modules/.bin/nuxt"
+        },
+        "linux": {
+          "program": "${workspaceFolder}/node_modules/.bin/nuxt"
+        },
+        "windows": {
+          "program": "${workspaceFolder}/node_modules/nuxt/bin/nuxt.js"
+        }
+      }
+    ],
+    "compounds": [
+      {
+        "name": "fullstack: nuxt",
+        "configurations": [
+          "server: nuxt"
+        ]
+      }
+    ]
+  }
+}
