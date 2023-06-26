@@ -21,7 +21,12 @@ Page contractorId is supposed to have some nested routes -> conractors profile, 
 
 When these pages are set up in a way where `[contractorId]` and desired nested routes are in separate layer from `[officeId]` in works in that way - content from `[contractorId]` is not visible in `[officeId]`.  
 
-
 ![Alt text](image.png)
 
 ![Alt text](image-1.png)
+
+## Branches
+
+**master** - routing is split in two layers, nested routing of [clientId] does not contain [officeId].
+
+**nested-in-office-id** - routing is contained in one layer, nested routing of [clientId] contains [officeId] and content of [clientId] is displayed inside [officeId].
