@@ -12,7 +12,6 @@
     "typecheck": "pnpm typecheck:front"
   },
   "devDependencies": {
-    "base": "workspace:*",
     "front": "workspace:*",
     "orders": "workspace:*",
     "contractors": "workspace:*"
@@ -28,7 +27,6 @@
   "peerDependencies": {},
   "resolutions": {
     "consola": "^3.0.0",
-    "base": "workspace:*",
     "front": "workspace:*",
     "orders": "workspace:*",
     "contractors": "workspace:*"
