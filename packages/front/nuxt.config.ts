@@ -1,4 +1,4 @@
 export default defineNuxtConfig({
-  extends: ['ui', 'base', 'users', 'orders', 'contractors'],
+  extends: ['base', 'orders', 'contractors'],
   ssr: false,
 })

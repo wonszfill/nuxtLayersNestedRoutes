@@ -13,10 +13,8 @@
   },
   "devDependencies": {
     "base": "workspace:*",
-    "ui": "workspace:*",
     "front": "workspace:*",
     "orders": "workspace:*",
-    "users": "workspace:*",
     "contractors": "workspace:*"
   },
   "engines": {
@@ -31,10 +29,8 @@
   "resolutions": {
     "consola": "^3.0.0",
     "base": "workspace:*",
-    "ui": "workspace:*",
     "front": "workspace:*",
     "orders": "workspace:*",
-    "users": "workspace:*",
     "contractors": "workspace:*"
   }
 }
